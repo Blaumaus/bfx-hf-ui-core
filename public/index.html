@@ -26,6 +26,17 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>The Honey Framework UI</title>
+
+    <!--
+      Renaming the electron's nodeIntegrations 'require' method to be able to import and use 3rd party libraries who may try overwrite these keys
+      https://www.electronjs.org/docs/faq#i-can-not-use-jqueryrequirejsmeteorangularjs-in-electron
+    -->
+    <script>
+      window.nodeRequire = require;
+      delete window.require;
+      delete window.exports;
+      delete window.module;
+    </script>
   </head>
   <body>
     <noscript>
