@@ -12,6 +12,7 @@ import GeneralTab from './AppSettingsModal.General'
 import ApiKeysTab from './AppSettingsModal.ApiKeys'
 import TradingModeTab from './AppSettingsModal.TradingMode'
 import AppearanceTab from './AppSettingsModal.Appearance'
+import AboutTab from './AppSettingsModal.About'
 
 import './style.css'
 
@@ -20,6 +21,7 @@ const Tabs = {
   TradingMode: 'appSettings.tradingModeTab',
   Keys: 'appSettings.apiKeys',
   Appearance: 'appSettings.appearanceTab',
+  About: 'appSettings.aboutTab',
 }
 
 const webTabs = [
@@ -81,6 +83,10 @@ const AppSettingsModal = ({
           </>
         )}
         {activeTab === Tabs.Appearance && <AppearanceTab />}
+        {activeTab === Tabs.General && <GeneralTab />}
+        {activeTab === Tabs.Keys && <ApiKeysTab />}
+        {activeTab === Tabs.TradingMode && <TradingModeTab onClose={onClose} />}
+        {activeTab === Tabs.About && <AboutTab />}
       </div>
     </Modal>
   )
