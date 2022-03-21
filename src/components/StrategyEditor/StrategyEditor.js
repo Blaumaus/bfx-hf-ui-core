@@ -188,9 +188,7 @@ const StrategyEditor = ({
               sbtitle='Strategy'
               sbicon={<Icon name='file-code-o' />}
               className='hfui-strategyeditor__wrapper'
-            >
-
-            </div>
+            />
             <div
               sbtitle='View in IDE'
               sbicon={<Icon name='edit' />}
